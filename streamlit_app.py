@@ -46,8 +46,7 @@ def get_vectorstore(_docs):
             persist_directory=persist_directory,
             embedding_function=OpenAIEmbeddings(model='text-embedding-3-small')
         )
-        else:
-        
+    else:
         return create_vector_store(_docs)
 
 # PDF 문서 로드 - 벡터 DB 저장 - 검색기 - 히스토리 모두 합친 Chain 구축
