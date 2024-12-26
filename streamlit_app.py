@@ -19,7 +19,7 @@ __import__('pysqlite3')
 import sys
 sys.modules['pysqlite3'] = sys.modules.pop('pysqlite3')
 
-os.environ['OPEN_API_KEY'] = st.secrets['OPEN_API_KEY']
+os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 
 @st.cache_resource
 def load_and_split_pdf(file_path):
