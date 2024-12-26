@@ -17,7 +17,7 @@ from langchain_community.chat_message_histories.streamlit import StreamlitChatMe
 # (
 __import__('pysqlite3')
 import sys
-sys.modules['pysqlite3'] = sys.modules.pop('pysqlite3')
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 
